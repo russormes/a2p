@@ -11,9 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140206225456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "groups", force: true do |t|
+    t.string   "classes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pupil_groups", force: true do |t|
+    t.integer  "pupil_id"
+    t.integer  "group_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pupils", force: true do |t|
+    t.string   "given_name"
+    t.string   "other_name"
+    t.string   "family_name"
+    t.string   "name_known_by"
+    t.date     "dob"
+    t.string   "gender"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
