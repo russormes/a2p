@@ -30,4 +30,7 @@ module A2p
         g.fixture_replacement :factory_girl, :dir => "spec/factories"
     end
   end
+  
+  I18n.enforce_available_locales = true
+  
 end
