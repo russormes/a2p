@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date of evidence:</strong>
+  <%= @evidence.date_of_evidence %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @evidence.description %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @evidence.comment %>
+</p>
+
+<%= link_to 'Edit', edit_evidence_path(@evidence) %> |
+<%= link_to 'Back', evidences_path %>

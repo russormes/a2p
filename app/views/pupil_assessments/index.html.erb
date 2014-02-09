@@ -1,0 +1,31 @@
+<h1>Listing pupil_assessments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date assessed</th>
+      <th>Comment</th>
+      <th>Present</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pupil_assessments.each do |pupil_assessment| %>
+      <tr>
+        <td><%= pupil_assessment.date_assessed %></td>
+        <td><%= pupil_assessment.comment %></td>
+        <td><%= pupil_assessment.present %></td>
+        <td><%= link_to 'Show', pupil_assessment %></td>
+        <td><%= link_to 'Edit', edit_pupil_assessment_path(pupil_assessment) %></td>
+        <td><%= link_to 'Destroy', pupil_assessment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pupil assessment', new_pupil_assessment_path %>

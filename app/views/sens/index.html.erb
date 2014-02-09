@@ -1,0 +1,27 @@
+<h1>Listing sens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sen code</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sens.each do |sen| %>
+      <tr>
+        <td><%= sen.sen_code %></td>
+        <td><%= link_to 'Show', sen %></td>
+        <td><%= link_to 'Edit', edit_sen_path(sen) %></td>
+        <td><%= link_to 'Destroy', sen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sen', new_sen_path %>

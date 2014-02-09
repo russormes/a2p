@@ -1,0 +1,25 @@
+<h1>Listing pupil_sens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pupil_sens.each do |pupil_sen| %>
+      <tr>
+        <td><%= link_to 'Show', pupil_sen %></td>
+        <td><%= link_to 'Edit', edit_pupil_sen_path(pupil_sen) %></td>
+        <td><%= link_to 'Destroy', pupil_sen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pupil sen', new_pupil_sen_path %>

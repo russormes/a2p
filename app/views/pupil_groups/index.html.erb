@@ -1,0 +1,25 @@
+<h1>Listing pupil_groups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pupil_groups.each do |pupil_group| %>
+      <tr>
+        <td><%= link_to 'Show', pupil_group %></td>
+        <td><%= link_to 'Edit', edit_pupil_group_path(pupil_group) %></td>
+        <td><%= link_to 'Destroy', pupil_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pupil group', new_pupil_group_path %>
