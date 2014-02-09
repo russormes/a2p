@@ -1,0 +1,29 @@
+<h1>Listing assessment_evidences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Evidence file</th>
+      <th>Comment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assessment_evidences.each do |assessment_evidence| %>
+      <tr>
+        <td><%= assessment_evidence.evidence_file %></td>
+        <td><%= assessment_evidence.comment %></td>
+        <td><%= link_to 'Show', assessment_evidence %></td>
+        <td><%= link_to 'Edit', edit_assessment_evidence_path(assessment_evidence) %></td>
+        <td><%= link_to 'Destroy', assessment_evidence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assessment evidence', new_assessment_evidence_path %>

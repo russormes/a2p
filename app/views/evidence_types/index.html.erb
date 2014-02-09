@@ -1,0 +1,27 @@
+<h1>Listing evidence_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Evidence type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @evidence_types.each do |evidence_type| %>
+      <tr>
+        <td><%= evidence_type.evidence_type %></td>
+        <td><%= link_to 'Show', evidence_type %></td>
+        <td><%= link_to 'Edit', edit_evidence_type_path(evidence_type) %></td>
+        <td><%= link_to 'Destroy', evidence_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Evidence type', new_evidence_type_path %>

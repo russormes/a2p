@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date assessed:</strong>
+  <%= @pupil_assessment.date_assessed %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @pupil_assessment.comment %>
+</p>
+
+<p>
+  <strong>Present:</strong>
+  <%= @pupil_assessment.present %>
+</p>
+
+<%= link_to 'Edit', edit_pupil_assessment_path(@pupil_assessment) %> |
+<%= link_to 'Back', pupil_assessments_path %>

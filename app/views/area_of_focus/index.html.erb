@@ -1,0 +1,27 @@
+<h1>Listing area_of_focus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Area of focus</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @area_of_focus.each do |area_of_focu| %>
+      <tr>
+        <td><%= area_of_focu.area_of_focus %></td>
+        <td><%= link_to 'Show', area_of_focu %></td>
+        <td><%= link_to 'Edit', edit_area_of_focu_path(area_of_focu) %></td>
+        <td><%= link_to 'Destroy', area_of_focu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Area of focu', new_area_of_focu_path %>

@@ -1,0 +1,21 @@
+<%= form_for(@area_of_focu) do |f| %>
+  <% if @area_of_focu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@area_of_focu.errors.count, "error") %> prohibited this area_of_focu from being saved:</h2>
+
+      <ul>
+      <% @area_of_focu.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :area_of_focus %><br>
+    <%= f.text_field :area_of_focus %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

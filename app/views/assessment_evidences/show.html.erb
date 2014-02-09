@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Evidence file:</strong>
+  <%= @assessment_evidence.evidence_file %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @assessment_evidence.comment %>
+</p>
+
+<%= link_to 'Edit', edit_assessment_evidence_path(@assessment_evidence) %> |
+<%= link_to 'Back', assessment_evidences_path %>
