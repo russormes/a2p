@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date_of_evidence: 2013-08-05
+  description: MyString
+  comment: MyString
+
+two:
+  date_of_evidence: 2013-08-05
+  description: MyString
+  comment: MyString

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  evidence_file: MyString
+  comment: MyString
+
+two:
+  evidence_file: MyString
+  comment: MyString
