@@ -88,3 +88,11 @@ group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
+
+# Added during development
+
+# For validating urls
+gem 'validate_url'
+
+# For checking code style
+gem 'rubocop'
