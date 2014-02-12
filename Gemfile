@@ -96,3 +96,7 @@ gem 'validate_url'
 
 # For checking code style
 gem 'rubocop'
+
+# For csv file imports
+gem 'roo'
+

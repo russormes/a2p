@@ -1,5 +1,7 @@
 # Defines the pupil model for a2p app
 class Pupil < ActiveRecord::Base
+  require 'csv'
+
   has_many :groupings, dependent: :destroy
   has_many :groups, through: :groupings
 
@@ -27,6 +29,21 @@ class Pupil < ActiveRecord::Base
   #  end
   #  write_attribute :image_path, url_str
   #end
+
+  def self.import(file)
+    CSV.foreach(file.path, headers: true) do |row|
+      pupil_hash = row.to_hash
+      pupil = Pupil.where(given_name: pupil_hash['given_name'], other_name: pupil_hash['other_name'],
+                          family_name: pupil_hash['family_name'], name_known_by: pupil_hash['name_known_by'],
+                          dob:  pupil_hash['dob'], gender:  pupil_hash['gender']).first_or_create
+      #if pupil.count == 1
+      #  pupil.first.update_attributes(pupil_hash)
+      #else
+      #  Pupil.create!(pupil_hash)
+      #end # end if !pupil.nil?
+      pupil.save!
+    end # end CSV.foreach
+  end # end self.import(file)
 
   def name
     [given_name, family_name].join ' '
