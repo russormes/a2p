@@ -1,4 +1,12 @@
 A2p::Application.routes.draw do
+  #get "pupils/index"
+  #get "pupils/import"
+  resources :pupils do
+    collection { post :import }
+  end
+ 
+  root to: "pupils#index"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
