@@ -4,7 +4,11 @@ class PupilsController < ApplicationController
   end
 
   def import
-    Pupil.import(params[:file])
-    redirect_to root_url, notice: "Pupils imported."
-  end
-end
+    begin
+      Pupil.import(params[:file])
+      redirect_to root_url, notice: "Pupils imported."
+    rescue
+      redirect_to root_url, notice: "Invalid CSV file format."
+    end # end begin. 
+  end # end def import.
+end # end class.
