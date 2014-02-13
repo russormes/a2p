@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140211123520) do
+ActiveRecord::Schema.define(version: 20140213160859) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,10 +35,10 @@ ActiveRecord::Schema.define(version: 20140211123520) do
     t.string   "family_name"
     t.string   "name_known_by"
     t.date     "dob"
-    t.string   "gender"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_path"
+    t.integer  "gender"
   end
 
   add_index "pupils", ["family_name"], name: "index_pupils_on_family_name", using: :btree
