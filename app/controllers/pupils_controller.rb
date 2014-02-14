@@ -2,6 +2,16 @@ class PupilsController < ApplicationController
   def index
     @pupils = Pupil.all
   end
+  
+  def new
+  end
+  
+  def create
+  @pupil = Pupil.new(params[:post])
+  @pupil.save
+  redirect_to @pupil
+  end
+  
 
   def import
     begin
