@@ -1,0 +1,13 @@
+
+<%= @pupil = Pupil.find(params[:id]) %>
+
+<p>
+  <strong>First Name: </strong>
+  <%= @pupil.given_name %>
+</p>
+ 
+<p>
+  <strong>Surname:</strong>
+  <%= @pupil.family_name %>
+</p>
+<%= link_to 'Back', pupils_path %>
