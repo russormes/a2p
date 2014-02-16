@@ -7,10 +7,26 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<%= render 'layouts/header' %>
   
-<%= yield %>
-
+<body>
+  
+<%= render 'layouts/header' %>
+  <div class= "container"
+       >
+    <section id= "content"
+       >
+      
+    <%= yield %>
+    </section>
+    <section id= "sidebar"
+     >
+      <section id= "recent_activity"
+     >
+    <header>
+      <h1 class= "ir" id= "recent" > Recent Activity </h1> 
+        </header>
+    </section>
+  </div>
+<%= render 'layouts/footer' %>
 </body>
 </html>
