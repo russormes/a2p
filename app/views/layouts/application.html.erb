@@ -2,7 +2,7 @@
 <html>
 <head>
  <meta charset= "utf-8" > 
-  <title>A2p</title>
+  <title>A2P</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -15,16 +15,19 @@
        >
     <section id= "content"
        >
-      
     <%= yield %>
     </section>
+    
     <section id= "sidebar"
      >
+      <%= yield :sidebar %>
       <section id= "recent_activity"
      >
     <header>
       <h1 class= "ir" id= "recent" > Recent Activity </h1> 
         </header>
+       
+      </section>
     </section>
   </div>
 <%= render 'layouts/footer' %>
