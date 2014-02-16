@@ -1,6 +1,7 @@
-header #page_header {
- background-color: #bc471d;
+header#page_header {
+ background: #bc471d url('/assets/brandtag.png') bottom right no-repeat;
   color: #fff;
+  font-size: 0.9em;
   height: 68px;
   margin-bottom: 10px;
   overflow: hidden;
@@ -22,4 +23,13 @@ header #page_header {
   position: absolute;
   top: 15px;
   }
+}
+#tagline {
+ margin-left: 20px;
+ }
+
+div.container {
+  overflow: hidden;
+  padding: 0 20px;
+  
 }
