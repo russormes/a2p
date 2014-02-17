@@ -1,0 +1,20 @@
+<header id= "page_header" role= "banner"
+       > 
+
+<nav id= "utility" 
+       > 
+<p> 
+You are logged in as <strong> Mr. Ormes </strong> 
+<%= link_to "[Your Account]" , "#" %> |
+<%= link_to "[Logout]" , "#" %>
+</p>  
+  
+</nav>
+  
+<%= link_to(
+  image_tag( "planner-xl.png" ,
+  alt: "a2p" ,
+  id: "logo" ),
+  root_url,
+  title: "Dashboard" ) %>
+</header>
