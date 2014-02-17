@@ -2,7 +2,7 @@
 class Pupil < ActiveRecord::Base
 # Define the relationships for the underlying data model
 # e.g. a pupil belongs to many teaching groups. 
-  has_many :groupings, dependent: :destroy
+ # has_many :groupings, dependent: :destroy
   has_many :groups, through: :groupings
 
 # Date validation for the pupil fields.

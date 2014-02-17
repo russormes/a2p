@@ -15,20 +15,9 @@ class PupilsController < ApplicationController
   def destroy
   @pupil = Pupil.find(params[:id])
   @pupil.destroy
-  redirect_to pupil_path
+    redirect_to root_path, notice: "Pupil destroyed"
 end
-  
-  private
-  def pupil_params
-    params.require(:pupil).permit(:given_name, :family_name)
-  end
-  
-def show
-  @pupil = Pupil.find(params[:id])
-end
-
-
-  
+   
   def import
     begin
       Pupil.import(params[:file])
@@ -39,4 +28,14 @@ end
     
  
   end # end def import.
+  
+  private
+  def pupil_params
+    params.require(:pupil).permit(:given_name, :family_name)
+  end
+  
+def show
+  @pupil = Pupil.find(params[:id])
+end
+  
 end # end class.
