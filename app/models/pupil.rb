@@ -13,7 +13,7 @@ class Pupil < ActiveRecord::Base
   validates :image_path, allow_blank: true, url: true
    validates :image_path, allow_blank: true, format: {
       with: /\.(gif|jpg|png)\z/i,
-      message: 'URL must point to GIT/JPG/PNG pictures'
+     message: 'URL must point to GIT/JPG/PNG file'
    }
  
  # Define an importer for pupil data from csv or excel files.
