@@ -9,15 +9,18 @@
     <%= f.label :family_name %><br>
     <%= f.text_field :family_name %>
   </p>
-
+  <p>
+    <%= f.label :dob %><br>
+    <%= f.date_field :dob %>
+</p>
   <p>
     <%= f.label :image_path %><br>
     <%= f.text_field :image_path %>
   </p>
-<%= radio_button_tag(:gender, 1) %>
-<%= label_tag(:gender_male, "Male") %>
-<%= radio_button_tag(:gender, 2) %>
-<%= label_tag(:gender_female, "Female") %>
+<%= f.radio_button(:gender, 1) %>
+<%= f.label(:gender, "Male") %>
+<%= f.radio_button(:gender, 2) %>
+<%= f.label(:gender, "Female") %>
  
   <p>
     <%= f.submit %>

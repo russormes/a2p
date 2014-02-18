@@ -2,22 +2,25 @@
 <table>
   <thead>
     <tr>
-      <th>Id</th>
+     
       <th>Given Name</th>
       <th>Family Name</th>
       <th>Gender</th>
+      <th>D.O.B</th>
     </tr>
   </thead>
   <tbody>
     <% @pupils.each do |pupil| %>
       <tr>
-        <td><%= pupil.id %></td>
+     
         <td><%= pupil.given_name %></td>
         <td><%= pupil.family_name %></td>
         <td><%= pupil.gender %></td>
+        <td><%= pupil.dob %></td>
         <td><%= link_to 'Show', pupil_path(pupil) %></td>
         <td><%= link_to 'Destroy', pupil_path(pupil),
                     method: :delete, data: { confirm: 'Are you sure?' } %>
+         
       </tr>
     <% end %>
   </tbody>
