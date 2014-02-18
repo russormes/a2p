@@ -11,13 +11,15 @@ class PupilsController < ApplicationController
   @pupil.save
   redirect_to @pupil
   end
-  
+    
   def destroy
   @pupil = Pupil.find(params[:id])
   @pupil.destroy
     redirect_to root_path, notice: "Pupil destroyed"
 end
-   
+  def age
+    dob=Pupil.dob
+  end
   def import
     begin
       Pupil.import(params[:file])
