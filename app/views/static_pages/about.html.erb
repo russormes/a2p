@@ -1,4 +1,13 @@
-<h1>About Us</h1>
-<p>
-  We are who we are.
-</p>
+<% provide(:title, 'About') %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A2P | <%= yield(:title) %></title>
+  </head>
+  <body>
+    <h1>About us</h1>
+    <p>
+      This is all about us and what we do. We are who we are.
+    </p>
+  </body>
+</html>
