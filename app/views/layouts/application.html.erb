@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title(yield(:title)) %></title>
+    <title><%= :A2P %></title>
     <%= stylesheet_link_tag "application", media: "all",
                                            "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -14,7 +14,7 @@
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
-          <%= link_to "sample app", '#', id: "logo" %>
+          <%= link_to "a2p", '#', id: "logo" %>
           <nav>
             <ul class="nav pull-right">
               <li><%= link_to "Home",    '#' %></li>
@@ -26,7 +26,7 @@
       </div>
     </header>
     <div class="container">
-      <%= yield %>
+      <%= :yield %>
     </div>
   </body>
 </html>
