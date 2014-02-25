@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag "application", media: "all",
                                            "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -19,6 +20,7 @@
               <li><%= link_to "Home",    '#' %></li>
               <li><%= link_to "Help",    '#' %></li>
               <li><%= link_to "Sign in", '#' %></li>
+              <li><%= link_to "Pupils", '#' %></li>
             </ul>
           </nav>
         </div>
