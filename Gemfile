@@ -6,8 +6,7 @@ gem 'pg', '0.15.1'
 
 # From the Ruby Tutorial book
 gem 'bootstrap-sass', '2.3.2.0'
-gem 'growl', '1.0.3'
-# gem 'bcrypt-ruby', '3.1.2'
+ gem 'bcrypt-ruby', '3.1.2'
 # gem 'will_paginate', '3.0.4'
 # gem 'bootstrap-will_paginate', '0.0.9'
 
@@ -16,23 +15,28 @@ group :development, :test do
   gem 'factory_girl_rails'
   # The following optional lines are part of the advanced setup.
   gem 'guard-rspec', '2.5.0'
-  gem 'spork-rails', '4.0.0'
-  gem 'guard-spork', '1.5.0'
-  #gem 'childprocess', '0.3.9'
-  
+  # gem 'spork-rails', '4.0.0'
+  # gem 'guard-spork', '1.5.0'
+  # gem 'childprocess', '0.3.9'
 end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
+
+  # gem 'spork-rails', '4.0.0'
+  # gem 'guard-spork', '1.5.0'
+  # gem 'childprocess', '0.3.9'
+    gem 'selenium-webdriver', '2.35.1'
+
   gem 'faker', '1.1.2'
   gem 'launchy'
 # capybara is to simulate web browser
   gem 'capybara', '2.1.0'
   gem 'cucumber-rails', '1.4.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
-
- 
 end
+
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -73,7 +77,11 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :production do
+
   #gem 'pg', '0.15.1'
+
+ # gem 'pg', '0.15.1'
+
   gem 'rails_12factor', '0.0.2'
 end
 

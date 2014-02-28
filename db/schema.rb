@@ -43,4 +43,12 @@ ActiveRecord::Schema.define(version: 20140213160859) do
 
   add_index "pupils", ["family_name"], name: "index_pupils_on_family_name", using: :btree
 
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "password_digest"
+  end
+
 end
