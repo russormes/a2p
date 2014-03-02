@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20140228183019) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "adminpack"
 
   create_table "groupings", force: true do |t|
     t.integer  "pupil_id"
