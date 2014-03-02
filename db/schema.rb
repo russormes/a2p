@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140228183019) do
+ActiveRecord::Schema.define(version: 20140302225142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "adminpack"
+
+  create_table "discrete_areas_of_development", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "groupings", force: true do |t|
     t.integer  "pupil_id"
@@ -33,16 +40,17 @@ ActiveRecord::Schema.define(version: 20140228183019) do
   create_table "pupils", force: true do |t|
     t.string   "given_name"
     t.string   "other_name"
-    t.string   "family_name"
+    t.string   "surname"
     t.string   "name_known_by"
     t.date     "dob"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_path"
     t.integer  "gender"
+    t.integer  "ethnicity"
   end
 
-  add_index "pupils", ["family_name"], name: "index_pupils_on_family_name", using: :btree
+  add_index "pupils", ["surname"], name: "index_pupils_on_surname", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
