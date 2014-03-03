@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140303074035) do
+ActiveRecord::Schema.define(version: 20140303081512) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20140303074035) do
   create_table "areas_of_focus", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "description"
   end
 
   create_table "discrete_areas_of_development", force: true do |t|
@@ -57,7 +59,16 @@ ActiveRecord::Schema.define(version: 20140303074035) do
 
   add_index "pupils", ["surname"], name: "index_pupils_on_surname", using: :btree
 
+  create_table "sens", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "statements_of_achievement", force: true do |t|
+    t.string   "level"
+    t.text     "statement"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

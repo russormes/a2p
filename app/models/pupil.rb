@@ -4,7 +4,9 @@ class Pupil < ActiveRecord::Base
 # e.g. a pupil belongs to many teaching groups. 
  # has_many :groupings, dependent: :destroy
   has_many :groups, through: :groupings
-
+  has_many :discrete_areas_of_development
+  has_many :sens
+  
 # Date validation for the pupil fields.
 # So far I can't figure out how to check the url is well formed and actually points
 # to the image file. TODO! 
