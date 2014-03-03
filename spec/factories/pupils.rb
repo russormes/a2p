@@ -5,7 +5,7 @@ FactoryGirl.define do
    p.id "2" 
    p.given_name { Faker::Name.first_name }
    p.other_name { Faker::Name.first_name }
-   p.family_name { Faker::Name.last_name }
+   p.surname { Faker::Name.last_name }
    p.name_known_by { Faker::Name.first_name }
    p.gender "F"
    p.dob "24/03/1975"

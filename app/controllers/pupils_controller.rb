@@ -33,7 +33,7 @@ end
   
   private
   def pupil_params
-    params.require(:pupil).permit(:given_name, :other_name, :dob, :name_known_by, :gender, :family_name)
+    params.require(:pupil).permit(:given_name, :other_name, :dob, :name_known_by, :gender, :surname)
   end
   
 def show

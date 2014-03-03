@@ -7,11 +7,11 @@ describe Pupil do
   it "is invalid without a givenname" do
     FactoryGirl.build(:pupil, given_name: nil).should_not be_valid
   end
-  it "is invalid without a familyname" do
-    FactoryGirl.build(:pupil, family_name: nil).should_not be_valid
+  it "is invalid without a surname" do
+    FactoryGirl.build(:pupil, surname: nil).should_not be_valid
   end
   it "returns a pupil's full name as a string" do
-    pupil = FactoryGirl.create(:pupil, given_name: "John", family_name: "Doe")
+    pupil = FactoryGirl.create(:pupil, given_name: "John", surname: "Doe")
     pupil.name.should == "John Doe"
   end
   it "has a valid url for the image path" do
@@ -26,7 +26,7 @@ end
 #  subject { @pupil }
 #
 #  it { should respond_to(:given_name) }
-#  it { should respond_to(:family_name) }
+#  it { should respond_to(:surname) }
 #  
 #  it { should be_valid }
 #
