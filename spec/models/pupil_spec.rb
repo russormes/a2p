@@ -21,7 +21,7 @@ end
 #
 #describe Pupil do
 #
-#  before { @pupil = Pupil.new(given_name: "Example", family_name: "User", image_path: "http://www.pxleyes.com/images/contests/rails-crossing/fullsize/sourceimage.jpg") }
+#  before { @pupil = Pupil.new(given_name: "Example", surname: "User", image_path: "http://www.pxleyes.com/images/contests/rails-crossing/fullsize/sourceimage.jpg") }
 #
 #  subject { @pupil }
 #
