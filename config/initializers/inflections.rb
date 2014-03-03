@@ -14,4 +14,6 @@
  ActiveSupport::Inflector.inflections(:en) do |inflect|
    inflect.acronym 'RESTful'
    inflect.irregular 'discrete_area_of_development', 'discrete_areas_of_development'
+   inflect.irregular 'area_of_focus', 'areas_of_focus'
+   inflect.irregular 'statement_of_achievement', 'statements_of_achievement'
  end
