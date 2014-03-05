@@ -8,7 +8,7 @@ Russell Ormes and Leon Ormes.
 
 # What is assessment?
 
-(http://en.wikipedia.org/wiki/Educational_assessment)[Assessment on wikipedia]
+[Assessment on wikipedia](http://en.wikipedia.org/wiki/Educational_assessment)
 Assessment is the ongoing process of gathering, analysing and reflecting on evidence to make informed and consistent judgements to improve future student learning. 
 
 
