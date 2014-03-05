@@ -7,6 +7,13 @@ We will give it a go in the Rails framework for Ruby and see where it takes us!
 Russell Ormes and Leon Ormes. 
 
 # What is assessment?
+Assessment is the ongoing process of gathering, analysing and reflecting on evidence to make informed and consistent judgements to improve future student learning. 
+
+VELS advocates 3 types of assessment  
+	formative
+	summative 
+	authentic
+
 
 #What is the point of education?
 
