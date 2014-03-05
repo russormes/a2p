@@ -9,7 +9,7 @@ Russell Ormes and Leon Ormes.
 # What is assessment?
 Assessment is the ongoing process of gathering, analysing and reflecting on evidence to make informed and consistent judgements to improve future student learning. 
 
-VELS advocates 3 types of assessment  
+VELS advocates 3 types of assessment /n 
 	formative
 	summative 
 	authentic
