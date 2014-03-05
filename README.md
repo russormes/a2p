@@ -5,3 +5,8 @@ This will help inform next step planning. Assign statements and build up a pictu
 We will give it a go in the Rails framework for Ruby and see where it takes us! 
 
 Russell Ormes and Leon Ormes. 
+
+# What is assessment?
+
+#What is the point of education?
+
